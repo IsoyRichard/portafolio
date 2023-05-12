@@ -3,10 +3,11 @@ const path = require("path");
 
 const app = express();
 
-app.get("/", (_req, res) => {
+app.get("/", (req, res) => {
+    console.log(req);
     res.sendFile(path.join(__dirname + "/index.html"));
 });
 
-app.listen(() => {
+app.listen(3000, () => {
     console.log("running server");
 });
